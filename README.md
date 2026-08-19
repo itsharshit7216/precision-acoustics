@@ -50,37 +50,27 @@ The project follows a component-based frontend architecture where the homepage i
 ```text
 Precision Acoustics
 │
-├── Navigation
+├── index.html
 │
-├── Hero
-│   ├── Product introduction
-│   └── Primary CTA
+├── src/
+│   ├── main.jsx
+│   ├── App.jsx
+│   │
+│   ├── components/
+│   ├── assets/
+│   └── styles/
 │
-├── Product Highlights
-│   ├── Crystal Clarity
-│   ├── Silent Sanctuary
-│   ├── All-Day Comfort
-│   └── 40-Hour Battery
+├── public/
 │
-├── 360° Showcase
-│   └── Product visualization
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
 │
-├── Experience
-│   ├── Planar Transduction
-│   ├── Smart Noise Cancellation
-│   └── Dual Listening Modes
+├── package.json
+├── package-lock.json
 │
-├── Specifications
-│   ├── Sound & Acoustics
-│   ├── Connectivity
-│   └── Battery & Build
-│
-├── Package
-│   └── Included accessories
-│
-├── Pricing / CTA
-│
-└── Footer
+├── README.md
+└── DECISIONS.md
 ```
 
 This structure keeps each major section independent and makes the interface easier to maintain and modify.
