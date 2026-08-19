@@ -46,23 +46,15 @@ export default function Navbar({ cartCount, onOpenCart }) {
             <div className="flex items-center gap-3 sm:gap-4">
               <button
                 onClick={onOpenCart}
-                className="relative p-2.5 rounded-none bg-white/5 hover:bg-white/10 text-aura-200 hover:text-white transition-all border border-white/10"
+                className="relative p-2.5 rounded-none bg-white/5 hover:bg-white/10 text-aura-200 hover:text-white transition-all border border-white/10 flex items-center justify-center group"
                 aria-label="Open Cart"
               >
-                <ShoppingBag className="w-4 h-4" />
+                <ShoppingBag className="w-4 h-4 text-aura-gold group-hover:scale-110 transition-transform" />
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-none bg-aura-gold text-aura-950 text-[9px] font-bold flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-none bg-aura-gold text-aura-950 text-[9px] font-bold flex items-center justify-center shadow-md">
                     {cartCount}
                   </span>
                 )}
-              </button>
-
-              <button
-                onClick={onOpenCart}
-                className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 rounded-none bg-gradient-to-r from-aura-gold via-aura-gold-light to-aura-gold text-aura-950 font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all shadow-md shadow-aura-gold/20"
-              >
-                <span>Add to Cart</span>
-                <ChevronRight className="w-3.5 h-3.5" />
               </button>
 
               <button
@@ -107,9 +99,10 @@ export default function Navbar({ cartCount, onOpenCart }) {
                 setMobileMenuOpen(false);
                 onOpenCart();
               }}
-              className="w-full py-4 rounded-none bg-gradient-to-r from-aura-gold to-aura-gold-light text-aura-950 font-bold text-center text-sm uppercase tracking-wider shadow-lg"
+              className="w-full py-4 rounded-none bg-white/10 hover:bg-white/15 border border-white/10 text-white font-bold text-center text-sm uppercase tracking-wider shadow-lg flex items-center justify-center gap-2"
             >
-              Add to Cart
+              <ShoppingBag className="w-4 h-4 text-aura-gold" />
+              <span>Open Cart ({cartCount})</span>
             </button>
             <div className="flex items-center justify-center gap-2 text-xs font-mono text-aura-400">
               <ShieldCheck className="w-4 h-4 text-aura-gold" />
